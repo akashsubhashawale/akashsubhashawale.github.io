@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Akash Subhash Awale - Academic Profile</title>
+    <style>
+        :root {
+            --primary: #003366; /* IIT Blue style */
+            --accent: #d35400;  /* Academic accent */
+            --bg: #f4f6f8;
+            --text: #333;
+            --sidebar-width: 280px;
+        }
+        body { margin: 0; font-family: 'Segoe UI', Arial, sans-serif; color: var(--text); background: var(--bg); display: flex; }
+        
+        /* Sidebar (Left) */
+        nav {
+            width: var(--sidebar-width);
+            background: #fff;
+            height: 100vh;
+            position: fixed;
+            padding: 2rem;
+            box-shadow: 2px 0 10px rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column;
+            overflow-y: auto;
+            box-sizing: border-box;
+            text-align: center;
+        }
+        .profile-placeholder {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background-color: #e0e0e0;
+            margin: 0 auto 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 4px solid var(--primary);
+            color: #666;
+            font-size: 0.8rem;
+        }
+        nav h1 { font-size: 1.4rem; color: var(--primary); margin-bottom: 0.2rem; line-height: 1.3; }
+        nav p { font-size: 0.9rem; color: #666; margin-bottom: 1.5rem; }
+        nav .contact { font-size: 0.85rem; color: #444; margin-bottom: 2rem; text-align: left; }
+        nav .contact b { color: var(--primary); }
+        nav a.menu-link { text-decoration: none; color: #555; padding: 12px 0; border-bottom: 1px solid #eee; display: block; text-align: left; transition: 0.2s; }
+        nav a.menu-link:hover { color: var(--accent); padding-left: 5px; font-weight: bold; }
+
+        /* Main Content (Right) */
+        main { margin-left: var(--sidebar-width); padding: 3rem 4rem; max-width: 900px; }
+        
+        section { background: #fff; padding: 2rem; margin-bottom: 2rem; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
+        
+        h2 { color: var(--primary); border-bottom: 2px solid #eee; padding-bottom: 10px; margin-top: 0; }
+        h3 { color: #444; margin-bottom: 5px; font-size: 1.1rem; border-left: 4px solid var(--accent); padding-left: 10px; }
+        
+        .job-meta { font-size: 0.9rem; color: #888; font-style: italic; margin-bottom: 10px; display: block; }
+        
+        ul { padding-left: 20px; line-height: 1.6; }
+        li { margin-bottom: 8px; }
+        
+        .tag { display: inline-block; background: #e8f0fe; color: #1967d2; padding: 4px 10px; border-radius: 15px; font-size: 0.85rem; margin-right: 5px; margin-bottom: 5px; }
+
+        table { width: 100%; border-collapse: collapse; margin-top: 15px; font-size: 0.95rem; }
+        th { background: #f8f9fa; text-align: left; padding: 10px; border-bottom: 2px solid #ddd; color: var(--primary); }
+        td { padding: 10px; border-bottom: 1px solid #eee; vertical-align: top; }
+        
+        /* Footer */
+        footer { text-align: center; font-size: 0.8rem; color: #999; margin-top: 3rem; }
+
+        @media (max-width: 768px) {
+            body { flex-direction: column; }
+            nav { width: auto; height: auto; position: relative; padding: 2rem; text-align: center; }
+            nav .contact, nav a.menu-link { text-align: center; }
+            main { margin: 0; padding: 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="profile-placeholder">
+            [Add Photo Here]
+        </div>
+        
+        <h1>Dr. Akash Subhash Awale</h1>
+        <p>Assistant Professor<br>Dept. of Mechanical Engineering<br><strong>IIT Jammu</strong></p>
+
+        <div class="contact">
+            <div><b>Email:</b> <a href="mailto:akash.awale@iitjammu.ac.in" style="color:#555">akash.awale@iitjammu.ac.in</a></div>
+            <div><b>Alt:</b> awaleakash14@gmail.com</div>
+            <div><b>Phone:</b> +91-9797454859</div>
+            <div style="margin-top:10px;"><b>Location:</b> IIT Jammu, J&K, India</div>
+        </div>
+
+        <a href="#about" class="menu-link">About Me</a>
+        <a href="#experience" class="menu-link">Experience</a>
+        <a href="#education" class="menu-link">Education</a>
+        <a href="#publications" class="menu-link">Publications</a>
+        <a href="#projects" class="menu-link">Projects & Teaching</a>
+    </nav>
+
+    <main>
+        
+        <section id="about">
+            [cite_start]<h2>About Me [cite: 2-4]</h2>
+            <p>I aim to explore and share knowledge about industrial as well as academic practices with students. My objective is to serve society through research activities in the development of <strong>biomedical implants</strong> and <strong>sustainable manufacturing</strong>.</p>
+            
+            <h3>Research Interests</h3>
+            <div style="margin-top:10px;">
+                <span class="tag">Sustainable machining (MQL & Cryogenic)</span>
+                <span class="tag">Ultrasonic vibration-assisted machining</span>
+                <span class="tag">Surface texturing</span>
+                <span class="tag">Post-processing of AM components</span>
+                <span class="tag">Laser cladding</span>
+                <span class="tag">Magnetic Barkhausen noise</span>
+            </div>
+        </section>
+
+        <section id="experience">
+            [cite_start]<h2>Experience [cite: 22-40]</h2>
+            
+            <h3>Assistant Professor</h3>
+            <span class="job-meta">May 2024 – Present | Indian Institute of Technology (IIT) Jammu</span>
+            <p>Department of Mechanical Engineering.</p>
+
+            <h3>Assistant Professor</h3>
+            <span class="job-meta">Sep 2022 – Apr 2024 | NIT Jamshedpur</span>
+            <p>Department of Production and Industrial Engineering.</p>
+
+            <h3>National Post-Doctoral Fellow</h3>
+            <span class="job-meta">Jan 2022 – Aug 2022 | IIT Kanpur</span>
+            <p>Department of Mechanical Engineering (Funded by SERB).</p>
+
+            <h3>Assistant Professor</h3>
+            <span class="job-meta">July 2015 – June 2016 | Dr. BATU, Lonere</span>
+            
+            <h3>Industrial Experience</h3>
+            <ul>
+                <li><strong>Graduate Trainee Engineer:</strong> Maharashtra Scooters Ltd. (Bajaj Auto), Satara (2012–2013).</li>
+                <li><strong>Machine Operator:</strong> Master Tools and Gauges Pvt. Ltd., Satara (2010–2011).</li>
+            </ul>
+        </section>
+
+        <section id="education">
+            [cite_start]<h2>Education [cite: 5-21]</h2>
+            <table>
+                <tr>
+                    <th>Degree</th>
+                    <th>Institute</th>
+                    <th>Year</th>
+                    <th>Result</th>
+                </tr>
+                <tr>
+                    <td><strong>Ph.D.</strong></td>
+                    <td>IIT (BHU), Varanasi</td>
+                    <td>2021</td>
+                    <td>7.75 CGPA</td>
+                </tr>
+                <tr>
+                    <td colspan="4"><em>Thesis: Minimum Quantity Lubrication Grinding on AISI H13 Die Steel using Different Eco-friendly Lubricants.</em></td>
+                </tr>
+                <tr>
+                    <td><strong>M.Tech</strong></td>
+                    <td>Walchand College of Engg.</td>
+                    <td>2015</td>
+                    <td>8.39 CPI</td>
+                </tr>
+                <tr>
+                    <td><strong>B.E.</strong></td>
+                    <td>Karmaveer Bahurao Patil College</td>
+                    <td>2012</td>
+                    <td>71.58 %</td>
+                </tr>
+            </table>
+        </section>
+
+        <section id="publications">
+            [cite_start]<h2>Selected Publications [cite: 50-90]</h2>
+            <p><em>Total Citations: 463 | H-index: 14 | Scopus ID: 57201736622</em></p>
+            
+            <ul>
+                <li><strong>Awale, A. S.</strong>, et al. (2025). "Investigation of biodegradable oil–based MQL parameters for sustainable grinding...". <em>Int. J. Adv. Manuf. Technol.</em>, Vol. 138.</li>
+                <li>Kishore, K., <strong>Awale, A. S.</strong>, et al. (2025). "Implementing Sustainable Cryo-MQL Grinding Practices...". <em>ASME-Journal of Tribology</em>, Vol. 147.</li>
+                <li><strong>Awale, A. S.</strong>, et al. (2024). "Evaluation of thermal damaged die steel through magnetic emission technique". <em>NDT&E International</em>, Vol. 144.</li>
+                <li>Sharma, A., <strong>Awale, A. S.</strong>, et al. (2024). "Implementation of hybrid CryoMQL sustainable lubri-cooling...". <em>Journal of Manufacturing Processes</em>, Vol. 119.</li>
+                <li><strong>Awale, A. S.</strong>, et al. (2023). "Magnetic non-destructive evaluation for surface integrity assessment of die steel...". <em>Journal of Manufacturing Processes</em>, Vol. 103.</li>
+                <li><strong>Awale, A. S.</strong>, et al. (2022). "Synergistic impact of eco-friendly nano-lubricants on the grindability of AISI H13 tool steel". <em>Journal of Cleaner Production</em>, Vol. 364.</li>
+                <li><strong>Awale, A. S.</strong>, et al. (2020). "Application of eco-friendly lubricants in sustainable grinding of die steel". <em>Materials and Manufacturing Processes</em>, 36 (6).</li>
+            </ul>
+            <p><small>(Full list of 20+ publications available on Google Scholar)</small></p>
+        </section>
+
+        <section id="projects">
+            [cite_start]<h2>Projects & Skills [cite: 47-49, 108-111]</h2>
+            
+            <h3>Sponsored Research</h3>
+            <p><strong>Improving surface integrity of bioceramic for artificial bone implants using sustainable ultrasonic vibration-assisted grinding.</strong><br>
+            Funded by SERB (₹21.31 Lakhs) | 2022-2024.</p>
+
+            <h3>Technical Skills</h3>
+            <ul>
+                <li><strong>Software:</strong> ANSYS (Explicit dynamics, Fluent), CATIA, SOLIDWORKS, MATLAB, Minitab.</li>
+                <li><strong>Instruments:</strong> SEM, TEM, AFM, XRD, Magnetic Barkhausen noise analyzer.</li>
+            </ul>
+
+            [cite_start]<h3>Teaching [cite: 41-46]</h3>
+            <ul>
+                <li>ME1301: Manufacturing Processes-I</li>
+                <li>PI1401: Manufacturing Processes-II</li>
+                <li>ME1609: Abrasive Machining and Finishing (Proposed)</li>
+            </ul>
+        </section>
+
+        <footer>
+            <p>© 2025 Dr. Akash Subhash Awale. Hosted on GitHub.</p>
+        </footer>
+    </main>
+
+</body>
+</html>
