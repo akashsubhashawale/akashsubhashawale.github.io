@@ -1,223 +1,1349 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dr. Akash Subhash Awale - Academic Profile</title>
-    <style>
-        :root {
-            --primary: #003366; /* IIT Blue style */
-            --accent: #d35400;  /* Academic accent */
-            --bg: #f4f6f8;
-            --text: #333;
-            --sidebar-width: 280px;
-        }
-        body { margin: 0; font-family: 'Segoe UI', Arial, sans-serif; color: var(--text); background: var(--bg); display: flex; }
-        
-        /* Sidebar (Left) */
-        nav {
-            width: var(--sidebar-width);
-            background: #fff;
-            height: 100vh;
-            position: fixed;
-            padding: 2rem;
-            box-shadow: 2px 0 10px rgba(0,0,0,0.1);
-            display: flex;
-            flex-direction: column;
-            overflow-y: auto;
-            box-sizing: border-box;
-            text-align: center;
-        }
-        .profile-placeholder {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            background-color: #e0e0e0;
-            margin: 0 auto 1rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border: 4px solid var(--primary);
-            color: #666;
-            font-size: 0.8rem;
-        }
-        nav h1 { font-size: 1.4rem; color: var(--primary); margin-bottom: 0.2rem; line-height: 1.3; }
-        nav p { font-size: 0.9rem; color: #666; margin-bottom: 1.5rem; }
-        nav .contact { font-size: 0.85rem; color: #444; margin-bottom: 2rem; text-align: left; }
-        nav .contact b { color: var(--primary); }
-        nav a.menu-link { text-decoration: none; color: #555; padding: 12px 0; border-bottom: 1px solid #eee; display: block; text-align: left; transition: 0.2s; }
-        nav a.menu-link:hover { color: var(--accent); padding-left: 5px; font-weight: bold; }
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Dr. Akash Subhash Awale — Assistant Professor, Department of Mechanical Engineering, IIT Jammu. Research in sustainable grinding & machining, advanced abrasive machining, ultrasonic vibration-assisted processes, surface integrity, and Barkhausen noise analysis." />
+  <meta name="theme-color" content="#0b1220" />
+  <title>Dr. Akash Subhash Awale | IIT Jammu</title>
 
-        /* Main Content (Right) */
-        main { margin-left: var(--sidebar-width); padding: 3rem 4rem; max-width: 900px; }
-        
-        section { background: #fff; padding: 2rem; margin-bottom: 2rem; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
-        
-        h2 { color: var(--primary); border-bottom: 2px solid #eee; padding-bottom: 10px; margin-top: 0; }
-        h3 { color: #444; margin-bottom: 5px; font-size: 1.1rem; border-left: 4px solid var(--accent); padding-left: 10px; }
-        
-        .job-meta { font-size: 0.9rem; color: #888; font-style: italic; margin-bottom: 10px; display: block; }
-        
-        ul { padding-left: 20px; line-height: 1.6; }
-        li { margin-bottom: 8px; }
-        
-        .tag { display: inline-block; background: #e8f0fe; color: #1967d2; padding: 4px 10px; border-radius: 15px; font-size: 0.85rem; margin-right: 5px; margin-bottom: 5px; }
+  <!-- Open Graph (optional but nice for sharing) -->
+  <meta property="og:title" content="Dr. Akash Subhash Awale | IIT Jammu" />
+  <meta property="og:description" content="Assistant Professor (Mechanical Engineering), IIT Jammu. Sustainable grinding & machining, advanced abrasive machining, ultrasonic vibration-assisted processes, surface integrity & NDT (Barkhausen noise)." />
+  <meta property="og:type" content="website" />
 
-        table { width: 100%; border-collapse: collapse; margin-top: 15px; font-size: 0.95rem; }
-        th { background: #f8f9fa; text-align: left; padding: 10px; border-bottom: 2px solid #ddd; color: var(--primary); }
-        td { padding: 10px; border-bottom: 1px solid #eee; vertical-align: top; }
-        
-        /* Footer */
-        footer { text-align: center; font-size: 0.8rem; color: #999; margin-top: 3rem; }
+  <style>
+    /* ---------- Design tokens ---------- */
+    :root{
+      --bg: #0b1220;
+      --panel: rgba(255,255,255,.06);
+      --panel2: rgba(255,255,255,.08);
+      --text: rgba(255,255,255,.92);
+      --muted: rgba(255,255,255,.72);
+      --faint: rgba(255,255,255,.56);
+      --border: rgba(255,255,255,.14);
+      --shadow: 0 20px 60px rgba(0,0,0,.45);
+      --accent: #7dd3fc;       /* sky */
+      --accent2: #a78bfa;      /* violet */
+      --good: #34d399;         /* green */
+      --warn: #fbbf24;         /* amber */
 
-        @media (max-width: 768px) {
-            body { flex-direction: column; }
-            nav { width: auto; height: auto; position: relative; padding: 2rem; text-align: center; }
-            nav .contact, nav a.menu-link { text-align: center; }
-            main { margin: 0; padding: 1.5rem; }
-        }
-    </style>
+      --radius: 18px;
+      --radius2: 14px;
+      --max: 1120px;
+      --navH: 72px;
+
+      --sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono","Courier New", monospace;
+
+      --ring: 0 0 0 4px rgba(125,211,252,.22);
+    }
+    :root[data-theme="light"]{
+      --bg: #f7f8fb;
+      --panel: rgba(10,15,25,.06);
+      --panel2: rgba(10,15,25,.08);
+      --text: rgba(8,12,20,.92);
+      --muted: rgba(8,12,20,.70);
+      --faint: rgba(8,12,20,.56);
+      --border: rgba(8,12,20,.12);
+      --shadow: 0 18px 50px rgba(10,15,25,.14);
+      --ring: 0 0 0 4px rgba(56,189,248,.20);
+    }
+
+    /* ---------- Base ---------- */
+    *{ box-sizing:border-box; }
+    html{ scroll-behavior:smooth; }
+    body{
+      margin:0;
+      font-family: var(--sans);
+      color: var(--text);
+      background: radial-gradient(1200px 800px at 20% -10%, rgba(167,139,250,.22), transparent 55%),
+                  radial-gradient(1100px 750px at 90% 10%, rgba(125,211,252,.20), transparent 55%),
+                  var(--bg);
+      line-height:1.55;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+    a{ color: inherit; text-decoration: none; }
+    a:hover{ text-decoration: underline; text-underline-offset: 4px; }
+    img{ max-width:100%; display:block; }
+    .wrap{ width: min(var(--max), calc(100% - 40px)); margin: 0 auto; }
+    .skip{
+      position:absolute; left:-999px; top:auto; width:1px; height:1px; overflow:hidden;
+    }
+    .skip:focus{
+      left: 16px; top: 12px; width:auto; height:auto; padding:10px 12px;
+      background: var(--panel2); border:1px solid var(--border); border-radius: 12px;
+      box-shadow: var(--shadow);
+      z-index: 9999;
+    }
+
+    /* ---------- Header / Nav ---------- */
+    header{
+      position: sticky; top: 0; z-index: 50;
+      backdrop-filter: blur(14px);
+      background: color-mix(in srgb, var(--bg) 76%, transparent);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav{
+      height: var(--navH);
+      display:flex; align-items:center; justify-content:space-between;
+      gap: 14px;
+    }
+    .brand{
+      display:flex; align-items:center; gap:12px;
+      min-width: 220px;
+    }
+    .logo{
+      width: 40px; height: 40px; border-radius: 12px;
+      background: linear-gradient(135deg, rgba(125,211,252,.95), rgba(167,139,250,.95));
+      box-shadow: 0 10px 30px rgba(125,211,252,.18);
+      display:grid; place-items:center;
+      border: 1px solid rgba(255,255,255,.18);
+      flex: 0 0 auto;
+    }
+    .logo svg{ width: 22px; height: 22px; opacity:.95; }
+    .brand .txt{ display:flex; flex-direction:column; line-height:1.15; }
+    .brand .txt strong{ font-size: 14px; letter-spacing:.2px; }
+    .brand .txt span{ font-size: 12px; color: var(--muted); }
+
+    nav ul{
+      list-style:none; margin:0; padding:0;
+      display:flex; align-items:center; gap: 4px;
+    }
+    .nav a.link{
+      display:inline-flex; align-items:center;
+      padding: 10px 12px;
+      border-radius: 12px;
+      color: var(--muted);
+      text-decoration:none;
+      border: 1px solid transparent;
+    }
+    .nav a.link:hover{
+      color: var(--text);
+      background: var(--panel);
+      border-color: var(--border);
+      text-decoration:none;
+    }
+    .nav a.link[aria-current="page"]{
+      color: var(--text);
+      background: color-mix(in srgb, var(--panel2) 60%, transparent);
+      border-color: var(--border);
+    }
+
+    .actions{ display:flex; align-items:center; gap:10px; }
+    .btn, button.btn{
+      border: 1px solid var(--border);
+      background: var(--panel);
+      color: var(--text);
+      padding: 10px 12px;
+      border-radius: 12px;
+      cursor:pointer;
+      text-decoration:none;
+      display:inline-flex; align-items:center; gap: 10px;
+      transition: transform .08s ease, background .2s ease, border-color .2s ease;
+      user-select:none;
+      font: inherit;
+    }
+    .btn:hover{ background: var(--panel2); text-decoration:none; }
+    .btn:active{ transform: translateY(1px); }
+    .btn.primary{
+      background: linear-gradient(135deg, rgba(125,211,252,.22), rgba(167,139,250,.22));
+      border-color: color-mix(in srgb, var(--accent) 35%, var(--border));
+    }
+    .btn.primary:hover{
+      background: linear-gradient(135deg, rgba(125,211,252,.28), rgba(167,139,250,.28));
+    }
+    .btn svg{ width: 16px; height: 16px; opacity:.9; }
+
+    .hamburger{
+      display:none;
+      width: 44px; height: 44px;
+      justify-content:center;
+    }
+    .hamburger svg{ width: 18px; height: 18px; }
+
+    @media (max-width: 980px){
+      nav ul{
+        position: fixed;
+        inset: calc(var(--navH) + 10px) 16px auto 16px;
+        background: color-mix(in srgb, var(--bg) 86%, transparent);
+        border: 1px solid var(--border);
+        border-radius: 16px;
+        box-shadow: var(--shadow);
+        padding: 10px;
+        display:none;
+        flex-direction: column;
+        gap: 4px;
+      }
+      nav ul.open{ display:flex; }
+      .nav a.link{ width: 100%; justify-content:flex-start; }
+      .hamburger{ display:inline-flex; }
+    }
+
+    /* ---------- Hero ---------- */
+    main{ padding-bottom: 70px; }
+    .hero{
+      padding: 40px 0 10px;
+    }
+    .heroGrid{
+      display:grid;
+      grid-template-columns: 1.15fr .85fr;
+      gap: 22px;
+      align-items: stretch;
+    }
+    @media (max-width: 980px){
+      .heroGrid{ grid-template-columns: 1fr; }
+    }
+
+    .card{
+      border: 1px solid var(--border);
+      background: color-mix(in srgb, var(--panel) 92%, transparent);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+    .card.pad{ padding: 22px; }
+    .kicker{
+      display:inline-flex; align-items:center; gap:10px;
+      color: var(--muted);
+      font-size: 13px;
+      letter-spacing: .2px;
+    }
+    .kicker .dot{
+      width: 8px; height: 8px; border-radius: 999px;
+      background: var(--good);
+      box-shadow: 0 0 0 6px rgba(52,211,153,.14);
+    }
+    h1{
+      margin: 10px 0 10px;
+      font-size: clamp(28px, 3.2vw, 40px);
+      line-height: 1.12;
+      letter-spacing: -0.02em;
+    }
+    .subtitle{
+      margin: 0;
+      color: var(--muted);
+      font-size: 15px;
+      max-width: 70ch;
+    }
+
+    .heroBadges{
+      margin-top: 16px;
+      display:flex; flex-wrap:wrap; gap: 8px;
+    }
+    .pill{
+      display:inline-flex; align-items:center; gap:8px;
+      padding: 8px 10px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: var(--panel);
+      color: var(--muted);
+      font-size: 13px;
+      white-space: nowrap;
+    }
+    .pill b{ color: var(--text); font-weight: 650; }
+    .heroCtas{
+      margin-top: 18px;
+      display:flex; flex-wrap:wrap; gap: 10px;
+    }
+
+    .profile{
+      display:flex; flex-direction:column;
+      gap: 14px;
+      height:100%;
+    }
+    .profileTop{
+      display:flex; align-items:center; gap: 14px;
+    }
+    .avatar{
+      width: 74px; height: 74px;
+      border-radius: 20px;
+      border: 1px solid var(--border);
+      background: linear-gradient(135deg, rgba(125,211,252,.18), rgba(167,139,250,.18));
+      overflow:hidden;
+      flex: 0 0 auto;
+      position: relative;
+    }
+    .avatar img{
+      width:100%; height:100%;
+      object-fit: cover;
+    }
+    .avatar .fallback{
+      position:absolute; inset:0;
+      display:grid; place-items:center;
+      color: var(--muted);
+      font-weight: 700;
+      letter-spacing: .06em;
+    }
+    .who strong{ display:block; font-size: 15px; }
+    .who span{ display:block; color: var(--muted); font-size: 13px; margin-top: 2px; }
+
+    .profileMeta{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-top: 4px;
+    }
+    .mini{
+      padding: 12px;
+      border-radius: 16px;
+      border: 1px solid var(--border);
+      background: var(--panel);
+    }
+    .mini .k{ color: var(--muted); font-size: 12px; }
+    .mini .v{ margin-top: 4px; font-weight: 650; letter-spacing:.2px; }
+
+    .contactRow{
+      margin-top: 8px;
+      display:flex; flex-direction:column; gap: 10px;
+    }
+    .contactItem{
+      display:flex; align-items:center; justify-content:space-between; gap: 10px;
+      padding: 12px;
+      border-radius: 16px;
+      border: 1px solid var(--border);
+      background: var(--panel);
+    }
+    .contactItem .left{ display:flex; flex-direction:column; gap: 2px; min-width:0; }
+    .contactItem .left .label{ color: var(--muted); font-size: 12px; }
+    .contactItem .left .value{ font-family: var(--mono); font-size: 13px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+    .contactItem .right{ display:flex; gap:8px; }
+
+    /* ---------- Sections ---------- */
+    section{
+      padding: 22px 0;
+      scroll-margin-top: calc(var(--navH) + 18px);
+    }
+    .sectionTitle{
+      display:flex; align-items:flex-end; justify-content:space-between; gap: 12px;
+      margin-bottom: 12px;
+    }
+    h2{
+      margin: 0;
+      font-size: 18px;
+      letter-spacing: -0.01em;
+    }
+    .hint{ color: var(--muted); font-size: 13px; margin: 0; }
+
+    .grid2{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+    @media (max-width: 980px){
+      .grid2{ grid-template-columns: 1fr; }
+    }
+
+    .list{
+      margin: 10px 0 0;
+      padding-left: 18px;
+      color: var(--muted);
+    }
+    .list li{ margin: 8px 0; }
+    .strong{ color: var(--text); font-weight: 650; }
+
+    /* Timeline */
+    .timeline{ display:flex; flex-direction:column; gap: 10px; }
+    .tItem{
+      padding: 14px;
+      border-radius: 18px;
+      border: 1px solid var(--border);
+      background: var(--panel);
+      position: relative;
+    }
+    .tTop{ display:flex; flex-wrap:wrap; align-items:baseline; gap: 8px 10px; }
+    .tRole{ font-weight: 700; }
+    .tOrg{ color: var(--muted); }
+    .tWhen{
+      margin-left:auto;
+      color: var(--faint);
+      font-size: 13px;
+      font-family: var(--mono);
+    }
+    .tDesc{ margin: 8px 0 0; color: var(--muted); font-size: 14px; }
+
+    /* Publications */
+    .pubTools{
+      display:flex; flex-wrap:wrap;
+      gap: 10px;
+      align-items:center;
+      margin-bottom: 10px;
+    }
+    .input{
+      flex: 1 1 260px;
+      display:flex; align-items:center; gap: 10px;
+      border: 1px solid var(--border);
+      background: var(--panel);
+      border-radius: 14px;
+      padding: 10px 12px;
+    }
+    .input input{
+      border:0; outline:0; background:transparent; color: var(--text);
+      width:100%;
+      font: inherit;
+    }
+    .input input::placeholder{ color: color-mix(in srgb, var(--muted) 75%, transparent); }
+    .chips{ display:flex; flex-wrap:wrap; gap: 8px; }
+    .chip{
+      border: 1px solid var(--border);
+      background: var(--panel);
+      color: var(--muted);
+      padding: 8px 10px;
+      border-radius: 999px;
+      cursor:pointer;
+      user-select:none;
+      font-size: 13px;
+    }
+    .chip[aria-pressed="true"]{
+      color: var(--text);
+      border-color: color-mix(in srgb, var(--accent) 45%, var(--border));
+      background: linear-gradient(135deg, rgba(125,211,252,.16), rgba(167,139,250,.12));
+    }
+    .pubList{ margin: 0; padding-left: 18px; }
+    .pubList li{
+      margin: 10px 0;
+      color: var(--muted);
+    }
+    .pubList li .year{
+      font-family: var(--mono);
+      font-size: 12px;
+      color: var(--faint);
+      margin-right: 8px;
+    }
+
+    /* Footer / Toast / Back to top */
+    footer{
+      padding: 24px 0 46px;
+      color: var(--muted);
+      border-top: 1px solid var(--border);
+      margin-top: 20px;
+    }
+    .footRow{
+      display:flex; flex-wrap:wrap; gap: 10px;
+      align-items:center; justify-content:space-between;
+    }
+    .toast{
+      position: fixed;
+      left: 50%;
+      bottom: 18px;
+      transform: translateX(-50%);
+      background: color-mix(in srgb, var(--bg) 70%, transparent);
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+      border-radius: 999px;
+      padding: 10px 14px;
+      color: var(--text);
+      display:none;
+      gap: 10px;
+      align-items:center;
+      z-index: 80;
+      backdrop-filter: blur(14px);
+      max-width: calc(100% - 30px);
+    }
+    .toast.show{ display:flex; }
+    .toast .small{ color: var(--muted); font-size: 13px; }
+
+    .backTop{
+      position: fixed;
+      right: 16px;
+      bottom: 16px;
+      width: 46px; height: 46px;
+      border-radius: 16px;
+      border: 1px solid var(--border);
+      background: var(--panel);
+      display:none;
+      place-items:center;
+      box-shadow: var(--shadow);
+      z-index: 70;
+    }
+    .backTop.show{ display:grid; }
+    .backTop:hover{ background: var(--panel2); }
+    .backTop svg{ width: 18px; height: 18px; }
+
+    /* Focus ring */
+    :is(a, button, input, .chip):focus-visible{
+      outline: none;
+      box-shadow: var(--ring);
+      border-color: color-mix(in srgb, var(--accent) 55%, var(--border));
+    }
+  </style>
+
+  <!-- Structured data (edit URLs if you add them) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Dr. Akash Subhash Awale",
+    "jobTitle": "Assistant Professor",
+    "affiliation": {
+      "@type": "Organization",
+      "name": "Indian Institute of Technology Jammu"
+    },
+    "email": ["akash.awale@iitjammu.ac.in", "awaleakash14@gmail.com"],
+    "telephone": ["+91-9797454859", "+91-7588802890"]
+  }
+  </script>
 </head>
+
 <body>
+  <a class="skip" href="#content">Skip to content</a>
 
-    <nav>
-        <div class="profile-placeholder">
-            [Add Photo Here]
+  <header>
+    <div class="wrap nav">
+      <a class="brand" href="#top" aria-label="Home">
+        <div class="logo" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none">
+            <path d="M12 2l7 4v6c0 5-3 9-7 10-4-1-7-5-7-10V6l7-4z" stroke="currentColor" stroke-width="1.6" opacity=".92"/>
+            <path d="M8.2 12.2l2.2 2.2 5.6-6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
         </div>
-        
-        <h1>Dr. Akash Subhash Awale</h1>
-        <p>Assistant Professor<br>Dept. of Mechanical Engineering<br><strong>IIT Jammu</strong></p>
+        <div class="txt">
+          <strong>Dr. Akash S. Awale</strong>
+          <span>IIT Jammu · Mechanical Engineering</span>
+        </div>
+      </a>
 
-        <div class="contact">
-            <div><b>Email:</b> <a href="mailto:akash.awale@iitjammu.ac.in" style="color:#555">akash.awale@iitjammu.ac.in</a></div>
-            <div><b>Alt:</b> awaleakash14@gmail.com</div>
-            <div><b>Phone:</b> +91-9797454859</div>
-            <div style="margin-top:10px;"><b>Location:</b> IIT Jammu, J&K, India</div>
+      <nav aria-label="Primary">
+        <button class="btn hamburger" id="menuBtn" aria-expanded="false" aria-controls="menu" title="Menu">
+          <svg viewBox="0 0 24 24" fill="none">
+            <path d="M5 7h14M5 12h14M5 17h14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+          </svg>
+        </button>
+
+        <ul id="menu">
+          <li><a class="link" href="#about">About</a></li>
+          <li><a class="link" href="#research">Research</a></li>
+          <li><a class="link" href="#experience">Experience</a></li>
+          <li><a class="link" href="#education">Education</a></li>
+          <li><a class="link" href="#projects">Projects</a></li>
+          <li><a class="link" href="#publications">Publications</a></li>
+          <li><a class="link" href="#teaching">Teaching</a></li>
+          <li><a class="link" href="#skills">Skills</a></li>
+          <li><a class="link" href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="actions">
+        <button class="btn" id="themeBtn" title="Toggle theme" aria-label="Toggle theme">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M12 3v2.2M12 18.8V21M4.2 12H3M21 12h-1.2M6.3 6.3 4.8 4.8M19.2 19.2l-1.5-1.5M17.7 6.3l1.5-1.5M4.8 19.2l1.5-1.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+            <path d="M12 17a5 5 0 1 0 0-10 5 5 0 0 0 0 10Z" stroke="currentColor" stroke-width="1.6"/>
+          </svg>
+          <span class="hideSmall">Theme</span>
+        </button>
+
+        <a class="btn primary" href="Akash_Awale_CV.pdf" download>
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M12 3v10m0 0 4-4m-4 4-4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M5 16v3a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+          </svg>
+          Download CV
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main id="content">
+    <div class="wrap hero" id="top">
+      <div class="heroGrid">
+        <!-- Left: Intro -->
+        <div class="card pad">
+          <div class="kicker"><span class="dot" aria-hidden="true"></span><span>Assistant Professor · Department of Mechanical Engineering · IIT Jammu</span></div>
+          <h1>Dr. Akash Subhash Awale</h1>
+          <p class="subtitle">
+            I work on <span class="strong">sustainable grinding and machining</span>, advanced abrasive processes,
+            ultrasonic vibration–assisted machining, surface integrity, and non-destructive evaluation
+            (including Barkhausen noise–based characterization).
+          </p>
+
+          <div class="heroBadges" aria-label="Highlights">
+            <span class="pill"><b>Ph.D.</b> IIT (BHU), Varanasi</span>
+            <span class="pill"><b>NPDF</b> IIT Kanpur (SERB)</span>
+            <span class="pill"><b>Focus</b> Sustainable manufacturing</span>
+            <span class="pill"><b>NDT</b> Magnetic Barkhausen noise</span>
+          </div>
+
+          <div class="heroCtas">
+            <a class="btn" href="#publications">
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M7 4h10a2 2 0 0 1 2 2v14l-3-2-3 2-3-2-3 2V6a2 2 0 0 1 2-2Z" stroke="currentColor" stroke-width="1.6" />
+              </svg>
+              View publications
+            </a>
+
+            <a class="btn" href="#contact">
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M4 8l8 5 8-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M6 19h12a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2Z" stroke="currentColor" stroke-width="1.6"/>
+              </svg>
+              Contact
+            </a>
+
+            <button class="btn" id="printBtn" type="button" title="Print or Save as PDF">
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M7 8V4h10v4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+                <path d="M7 17h10v3H7v-3Z" stroke="currentColor" stroke-width="1.6"/>
+                <path d="M6 10h12a2 2 0 0 1 2 2v5h-3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+                <path d="M4 17H1v-5a2 2 0 0 1 2-2h1" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+              </svg>
+              Print
+            </button>
+          </div>
+
+          <p class="hint" style="margin-top:14px">
+            .
+          </p>
         </div>
 
-        <a href="#about" class="menu-link">About Me</a>
-        <a href="#experience" class="menu-link">Experience</a>
-        <a href="#education" class="menu-link">Education</a>
-        <a href="#publications" class="menu-link">Publications</a>
-        <a href="#projects" class="menu-link">Projects & Teaching</a>
-    </nav>
-
-    <main>
-        
-        <section id="about">
-            [cite_start]<h2>About Me [cite: 2-4]</h2>
-            <p>I aim to explore and share knowledge about industrial as well as academic practices with students. My objective is to serve society through research activities in the development of <strong>biomedical implants</strong> and <strong>sustainable manufacturing</strong>.</p>
-            
-            <h3>Research Interests</h3>
-            <div style="margin-top:10px;">
-                <span class="tag">Sustainable machining (MQL & Cryogenic)</span>
-                <span class="tag">Ultrasonic vibration-assisted machining</span>
-                <span class="tag">Surface texturing</span>
-                <span class="tag">Post-processing of AM components</span>
-                <span class="tag">Laser cladding</span>
-                <span class="tag">Magnetic Barkhausen noise</span>
+        <!-- Right: Profile -->
+        <div class="card pad profile">
+          <div class="profileTop">
+            <div class="avatar" aria-label="Profile photo">
+              <!-- Put profile.jpg in your repo root to replace the fallback -->
+              <img src="profile.jpg" alt="Dr. Akash Subhash Awale" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" />
+              <div class="fallback" style="display:none;">ASA</div>
             </div>
-        </section>
+            <div class="who">
+              <strong>Indian Institute of Technology Jammu</strong>
+              <span>Mechanical Engineering · India</span>
+            </div>
+          </div>
 
-        <section id="experience">
-            [cite_start]<h2>Experience [cite: 22-40]</h2>
-            
-            <h3>Assistant Professor</h3>
-            <span class="job-meta">May 2024 – Present | Indian Institute of Technology (IIT) Jammu</span>
-            <p>Department of Mechanical Engineering.</p>
+          <div class="profileMeta">
+            <div class="mini">
+              <div class="k">Research areas</div>
+              <div class="v">Grinding · Machining · NDT</div>
+            </div>
+            <div class="mini">
+              <div class="k">Scopus ID</div>
+              <div class="v" style="font-family:var(--mono); font-size:13px;">57201736622</div>
+            </div>
+          </div>
 
-            <h3>Assistant Professor</h3>
-            <span class="job-meta">Sep 2022 – Apr 2024 | NIT Jamshedpur</span>
-            <p>Department of Production and Industrial Engineering.</p>
+          <div class="contactRow" aria-label="Quick contact">
+            <div class="contactItem">
+              <div class="left">
+                <div class="label">Email</div>
+                <div class="value" id="emailPrimary">akash.awale@iitjammu.ac.in</div>
+              </div>
+              <div class="right">
+                <button class="btn" type="button" data-copy="#emailPrimary" title="Copy email">
+                  <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <path d="M8 8h10v12H8V8Z" stroke="currentColor" stroke-width="1.6"/>
+                    <path d="M6 16H5a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v1" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+                  </svg>
+                  Copy
+                </button>
+                <a class="btn" href="mailto:akash.awale@iitjammu.ac.in" title="Send email">
+                  <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <path d="M4 8l8 5 8-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M6 19h12a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2Z" stroke="currentColor" stroke-width="1.6"/>
+                  </svg>
+                  Email
+                </a>
+              </div>
+            </div>
 
-            <h3>National Post-Doctoral Fellow</h3>
-            <span class="job-meta">Jan 2022 – Aug 2022 | IIT Kanpur</span>
-            <p>Department of Mechanical Engineering (Funded by SERB).</p>
+            <div class="contactItem">
+              <div class="left">
+                <div class="label">Mobile</div>
+                <div class="value" id="phonePrimary">+91-9797454859</div>
+              </div>
+              <div class="right">
+                <button class="btn" type="button" data-copy="#phonePrimary" title="Copy number">
+                  <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <path d="M8 8h10v12H8V8Z" stroke="currentColor" stroke-width="1.6"/>
+                    <path d="M6 16H5a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v1" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+                  </svg>
+                  Copy
+                </button>
+                <a class="btn" href="tel:+919797454859" title="Call">
+                  <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <path d="M6.5 3.5l3 2-1.2 2.6c.9 1.7 2.3 3.2 4.1 4.1L15 11l2 3c.4.7.3 1.5-.3 2.1l-1 1c-1 .9-2.5 1.2-3.8.7-3.5-1.4-6.3-4.2-7.7-7.7-.5-1.3-.2-2.8.7-3.8l1-1c.6-.6 1.5-.7 2.1-.3Z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  Call
+                </a>
+              </div>
+            </div>
 
-            <h3>Assistant Professor</h3>
-            <span class="job-meta">July 2015 – June 2016 | Dr. BATU, Lonere</span>
-            
-            <h3>Industrial Experience</h3>
-            <ul>
-                <li><strong>Graduate Trainee Engineer:</strong> Maharashtra Scooters Ltd. (Bajaj Auto), Satara (2012–2013).</li>
-                <li><strong>Machine Operator:</strong> Master Tools and Gauges Pvt. Ltd., Satara (2010–2011).</li>
+            <div class="mini" style="margin-top:2px;">
+              <div class="k">Secondary contacts</div>
+              <div class="v" style="font-family:var(--mono); font-size:13px; font-weight:600;">
+                awaleakash14@gmail.com · +91-7588802890
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- About -->
+    <section id="about">
+      <div class="wrap">
+        <div class="sectionTitle">
+          <h2>About</h2>
+          <p class="hint">.</p>
+        </div>
+
+        <div class="grid2">
+          <div class="card pad">
+            <p style="margin:0; color:var(--muted);">
+              I am an Assistant Professor in the Department of Mechanical Engineering at IIT Jammu.
+              My work focuses on sustainable machining and grinding, advanced abrasive finishing,
+              and characterization of surface integrity using non-destructive techniques.
+            </p>
+
+            <ul class="list">
+              <li><span class="strong">Objective:</span> Explore and share knowledge in industry and academia, and contribute through research in biomedical implants and sustainable manufacturing.</li>
+              <li><span class="strong">Research themes:</span> eco-friendly lubri-cooling (MQL/Cryo-MQL), ultrasonic vibration-assisted processes, surface texturing, and post-processing of additively manufactured components.</li>
             </ul>
-        </section>
+          </div>
 
-        <section id="education">
-            [cite_start]<h2>Education [cite: 5-21]</h2>
-            <table>
-                <tr>
-                    <th>Degree</th>
-                    <th>Institute</th>
-                    <th>Year</th>
-                    <th>Result</th>
-                </tr>
-                <tr>
-                    <td><strong>Ph.D.</strong></td>
-                    <td>IIT (BHU), Varanasi</td>
-                    <td>2021</td>
-                    <td>7.75 CGPA</td>
-                </tr>
-                <tr>
-                    <td colspan="4"><em>Thesis: Minimum Quantity Lubrication Grinding on AISI H13 Die Steel using Different Eco-friendly Lubricants.</em></td>
-                </tr>
-                <tr>
-                    <td><strong>M.Tech</strong></td>
-                    <td>Walchand College of Engg.</td>
-                    <td>2015</td>
-                    <td>8.39 CPI</td>
-                </tr>
-                <tr>
-                    <td><strong>B.E.</strong></td>
-                    <td>Karmaveer Bahurao Patil College</td>
-                    <td>2012</td>
-                    <td>71.58 %</td>
-                </tr>
-            </table>
-        </section>
+          <div class="card pad">
+            <div class="sectionTitle" style="margin-bottom:10px;">
+              <h2 style="font-size:16px;">Research interests</h2>
+              <p class="hint">.</p>
+            </div>
+            <div class="chips" id="interestChips" aria-label="Research interest tags">
+              <span class="pill">Sustainable grinding (MQL / Cryogenic)</span>
+              <span class="pill">Advanced abrasive machining</span>
+              <span class="pill">Ultrasonic vibration–assisted machining</span>
+              <span class="pill">Surface texturing</span>
+              <span class="pill">Difficult-to-cut materials</span>
+              <span class="pill">Surface integrity</span>
+              <span class="pill">Magnetic Barkhausen noise (NDT)</span>
+              <span class="pill">Laser cladding</span>
+              <span class="pill">Post-processing of AM components</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-        <section id="publications">
-            [cite_start]<h2>Selected Publications [cite: 50-90]</h2>
-            <p><em>Total Citations: 463 | H-index: 14 | Scopus ID: 57201736622</em></p>
-            
-            <ul>
-                <li><strong>Awale, A. S.</strong>, et al. (2025). "Investigation of biodegradable oil–based MQL parameters for sustainable grinding...". <em>Int. J. Adv. Manuf. Technol.</em>, Vol. 138.</li>
-                <li>Kishore, K., <strong>Awale, A. S.</strong>, et al. (2025). "Implementing Sustainable Cryo-MQL Grinding Practices...". <em>ASME-Journal of Tribology</em>, Vol. 147.</li>
-                <li><strong>Awale, A. S.</strong>, et al. (2024). "Evaluation of thermal damaged die steel through magnetic emission technique". <em>NDT&E International</em>, Vol. 144.</li>
-                <li>Sharma, A., <strong>Awale, A. S.</strong>, et al. (2024). "Implementation of hybrid CryoMQL sustainable lubri-cooling...". <em>Journal of Manufacturing Processes</em>, Vol. 119.</li>
-                <li><strong>Awale, A. S.</strong>, et al. (2023). "Magnetic non-destructive evaluation for surface integrity assessment of die steel...". <em>Journal of Manufacturing Processes</em>, Vol. 103.</li>
-                <li><strong>Awale, A. S.</strong>, et al. (2022). "Synergistic impact of eco-friendly nano-lubricants on the grindability of AISI H13 tool steel". <em>Journal of Cleaner Production</em>, Vol. 364.</li>
-                <li><strong>Awale, A. S.</strong>, et al. (2020). "Application of eco-friendly lubricants in sustainable grinding of die steel". <em>Materials and Manufacturing Processes</em>, 36 (6).</li>
+    <!-- Research (optional details) -->
+    <section id="research">
+      <div class="wrap">
+        <div class="sectionTitle">
+          <h2>Research</h2>
+          <p class="hint">Focus areas and approach</p>
+        </div>
+
+        <div class="card pad">
+          <div class="grid2">
+            <div>
+              <p style="margin-top:0; color:var(--muted);">
+                My research explores sustainable manufacturing strategies that improve surface integrity,
+                enhance tribological performance, and reduce environmental impact.
+              </p>
+              <ul class="list">
+                <li>Optimization of grinding/machining environments (dry, MQL, Cryo-MQL, hybrid approaches).</li>
+                <li>Ultrasonic vibration–assisted machining and grinding for improved process stability.</li>
+                <li>Surface integrity assessment using magnetic emission / Barkhausen noise analysis.</li>
+              </ul>
+            </div>
+            <div>
+              <p style="margin-top:0; color:var(--muted);">
+                If you collaborate with me, typical outcomes include:
+              </p>
+              <ul class="list">
+                <li>Improved surface finish and reduced thermal damage.</li>
+                <li>Eco-friendly process parameter optimization using data-driven approaches.</li>
+                <li>Experimental + characterization workflow (SEM/XRD/MBN and related tools).</li>
+              </ul>
+              <div class="heroCtas" style="margin-top:12px;">
+                <a class="btn" href="#projects">
+                  <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <path d="M4 20h16M7 17V7a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v10" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+                    <path d="M10 9h4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+                  </svg>
+                  View projects
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience">
+      <div class="wrap">
+        <div class="sectionTitle">
+          <h2>Experience</h2>
+          <p class="hint">Academic · Research · Industrial</p>
+        </div>
+
+        <div class="timeline">
+          <div class="tItem">
+            <div class="tTop">
+              <div class="tRole">Assistant Professor</div>
+              <div class="tOrg">Indian Institute of Technology Jammu</div>
+              <div class="tWhen">May 2024 – Present</div>
+            </div>
+            <p class="tDesc">Department of Mechanical Engineering.</p>
+          </div>
+
+          <div class="tItem">
+            <div class="tTop">
+              <div class="tRole">Assistant Professor</div>
+              <div class="tOrg">National Institute of Technology Jamshedpur</div>
+              <div class="tWhen">Sep 2022 – Apr 2024</div>
+            </div>
+            <p class="tDesc">Department of Production & Industrial Engineering.</p>
+          </div>
+
+          <div class="tItem">
+            <div class="tTop">
+              <div class="tRole">National Post-Doctoral Fellow (SERB)</div>
+              <div class="tOrg">Indian Institute of Technology Kanpur</div>
+              <div class="tWhen">Jan 2022 – Aug 2022</div>
+            </div>
+            <p class="tDesc">Post-doctoral research in Mechanical Engineering.</p>
+          </div>
+
+          <div class="tItem">
+            <div class="tTop">
+              <div class="tRole">Ph.D. Research</div>
+              <div class="tOrg">IIT (BHU) Varanasi</div>
+              <div class="tWhen">Jul 2016 – Sep 2021</div>
+            </div>
+            <p class="tDesc">Thesis: Minimum Quantity Lubrication Grinding on AISI H13 Die Steel using different eco-friendly lubricants.</p>
+          </div>
+
+          <div class="tItem">
+            <div class="tTop">
+              <div class="tRole">Assistant Professor</div>
+              <div class="tOrg">Dr. Babasaheb Ambedkar Technological University, Lonere</div>
+              <div class="tWhen">Jul 2015 – Jun 2016</div>
+            </div>
+            <p class="tDesc">Department of Mechanical Engineering.</p>
+          </div>
+
+          <div class="tItem">
+            <div class="tTop">
+              <div class="tRole">Graduate Trainee Engineer</div>
+              <div class="tOrg">Maharashtra Scooters Ltd. (Bajaj Auto Group), Satara</div>
+              <div class="tWhen">Aug 2012 – Aug 2013</div>
+            </div>
+            <p class="tDesc">Tool Room Department.</p>
+          </div>
+
+          <div class="tItem">
+            <div class="tTop">
+              <div class="tRole">Machine Operator</div>
+              <div class="tOrg">Master Tools & Gauges Pvt. Ltd., Satara</div>
+              <div class="tWhen">Dec 2010 – Dec 2011</div>
+            </div>
+            <p class="tDesc">Tool Room Department.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education -->
+    <section id="education">
+      <div class="wrap">
+        <div class="sectionTitle">
+          <h2>Education</h2>
+          <p class="hint">.</p>
+        </div>
+
+        <div class="grid2">
+          <div class="card pad">
+            <div class="tTop">
+              <div class="tRole">Ph.D. (Mechanical Engineering)</div>
+              <div class="tOrg">IIT (BHU), Varanasi, India</div>
+              <div class="tWhen">2021</div>
+            </div>
+            <p class="tDesc"><span class="strong">Thesis:</span> Minimum Quantity Lubrication Grinding on AISI H13 Die Steel using different eco-friendly lubricants.</p>
+          </div>
+
+          <div class="card pad">
+            <div class="tTop">
+              <div class="tRole">M.Tech (Mechanical Engineering)</div>
+              <div class="tOrg">Walchand College of Engineering, Sangli</div>
+              <div class="tWhen">2015</div>
+            </div>
+            <p class="tDesc"><span class="strong">Thesis:</span> Optimization of High Speed Turning on AISI S7 Tool Steel using Taguchi GRA.</p>
+          </div>
+
+          <div class="card pad">
+            <div class="tTop">
+              <div class="tRole">B.E (Production Engineering)</div>
+              <div class="tOrg">KBP College of Engineering, Satara</div>
+              <div class="tWhen">2012</div>
+            </div>
+            <p class="tDesc">Under Shivaji University.</p>
+          </div>
+
+          <div class="card pad">
+            <div class="tTop">
+              <div class="tRole">Diploma (Mechanical Engineering)</div>
+              <div class="tOrg">Government Polytechnic, Karad</div>
+              <div class="tWhen">2009</div>
+            </div>
+            <p class="tDesc">MSBTE Board.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects">
+      <div class="wrap">
+        <div class="sectionTitle">
+          <h2>Sponsored projects</h2>
+          <p class="hint">.</p>
+        </div>
+
+        <div class="grid2">
+          <div class="card pad">
+            <div class="tTop">
+              <div class="tRole">SERB (Completed)</div>
+              <div class="tOrg">Project No.: PDF/2021/004513</div>
+              <div class="tWhen">2022 – 2024</div>
+            </div>
+            <p class="tDesc">
+              <span class="strong">Title:</span> Improving surface integrity of bioceramic for artificial bone implants using sustainable ultrasonic vibration-assisted grinding.
+              <br />
+              <span class="strong">Funding:</span> ~₹21,31,200 (as reported).
+            </p>
+          </div>
+
+          <div class="card pad">
+            <div class="tTop">
+              <div class="tRole">DRDO (Submitted)</div>
+              <div class="tOrg">Proposal</div>
+              <div class="tWhen">Status: Submitted</div>
+            </div>
+            <p class="tDesc">
+              <span class="strong">Title:</span> Study the machinability and surface integrity of Cf/SiC ceramic matrix composite under ultrasonic vibration assisted machining.
+            </p>
+          </div>
+        </div>
+
+        <div class="card pad" style="margin-top:14px;">
+          <div class="sectionTitle" style="margin-bottom:10px;">
+            <h2 style="font-size:16px;">Awards & honors</h2>
+            <p class="hint">Selected</p>
+          </div>
+          <ul class="list" style="margin-top:0;">
+            <li>National Post-Doctoral Fellowship (SERB) at IIT Kanpur (2021–2022).</li>
+            <li>Production Engineering Division Prize — The Institution of Engineers (India) (2022).</li>
+            <li>Best Paper Award (2018) — Surface integrity characterization of hardened H13 die steel in MQL grinding (conference).</li>
+            <li>GATE rank: 852 (2012) — Production & Industrial Engineering.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Publications -->
+    <section id="publications">
+      <div class="wrap">
+        <div class="sectionTitle">
+          <h2>Selected publications</h2>
+          <p class="hint">.</p>
+        </div>
+
+        <div class="card pad">
+          <div class="pubTools">
+            <div class="input" title="Search publications">
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" style="width:18px;height:18px;opacity:.85;">
+                <path d="M10.5 18a7.5 7.5 0 1 1 0-15 7.5 7.5 0 0 1 0 15Z" stroke="currentColor" stroke-width="1.6"/>
+                <path d="M16.5 16.5 21 21" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+              </svg>
+              <input id="pubSearch" type="search" placeholder="Search by keyword, journal, author, year…" aria-label="Search publications" />
+            </div>
+
+            <div class="chips" aria-label="Filter by year">
+              <button class="chip" type="button" data-year="all" aria-pressed="true">All</button>
+              <button class="chip" type="button" data-year="2025" aria-pressed="false">2025</button>
+              <button class="chip" type="button" data-year="2024" aria-pressed="false">2024</button>
+              <button class="chip" type="button" data-year="2023" aria-pressed="false">2023</button>
+              <button class="chip" type="button" data-year="2022" aria-pressed="false">2022</button>
+              <button class="chip" type="button" data-year="2020" aria-pressed="false">2020</button>
+              <button class="chip" type="button" data-year="2019" aria-pressed="false">2019</button>
+            </div>
+
+            <button class="btn" type="button" id="clearPubFilters" title="Clear filters">
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M6 6l12 12M18 6 6 18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+              </svg>
+              Clear
+            </button>
+          </div>
+
+          <ol class="pubList" id="pubList">
+            <li data-year="2025"> <span class="year">2025</span> A. S. Awale et al., “Investigation of biodegradable oil–based MQL parameters for sustainable grinding of H13 die steel using MCDM techniques,” <i>International Journal of Advanced Manufacturing Technology</i>, Vol. 138, pp. 2065–2082.</li>
+            <li data-year="2025"> <span class="year">2025</span> K. Kishore, A. Sharma, A. S. Awale, M. K. Sinha, “Implementing Sustainable Cryo-MQL Grinding Practices for improvement of tribological characteristics of Inconel 625,” <i>ASME Journal of Tribology</i>, Vol. 147(12), 124203.</li>
+            <li data-year="2024"> <span class="year">2024</span> A. S. Awale et al., “Evaluation of thermal damaged die steel through magnetic emission technique,” <i>NDT&E International</i>, Vol. 144, 103104.</li>
+            <li data-year="2024"> <span class="year">2024</span> A. Sharma et al., “Hybrid CryoMQL lubri-cooling to enhance grindability and surface integrity of tool steel,” <i>Journal of Manufacturing Processes</i>, Vol. 119, pp. 16–31.</li>
+            <li data-year="2023"> <span class="year">2023</span> A. S. Awale et al., “Magnetic non-destructive evaluation for surface integrity assessment of die steel upon sustainable grinding,” <i>Journal of Manufacturing Processes</i>, Vol. 103, pp. 193–026.</li>
+            <li data-year="2022"> <span class="year">2022</span> A. S. Awale et al., “Synergistic impact of eco-friendly nano-lubricants on grindability of AISI H13 tool steel,” <i>Journal of Cleaner Production</i>, Vol. 364, 132686.</li>
+            <li data-year="2022"> <span class="year">2022</span> A. Chaudhari et al., “Modelling and simulation of dry ultrasonic vibration assisted grinding…,” <i>ASME Journal of Manufacturing Science and Engineering</i>, Vol. 144(11).</li>
+            <li data-year="2022"> <span class="year">2022</span> S. S. Singh, A. S. Awale, B. Nahak, “Assessment of surface characteristics… using magnetic non-destructive technique,” <i>Russian Journal of Non-destructive Testing</i>, Vol. 58(5), pp. 369–380.</li>
+            <li data-year="2020"> <span class="year">2020</span> A. S. Awale et al., “Multi-objective optimization of MQL mist parameters for eco-friendly grinding,” <i>Journal of Manufacturing Processes</i>, Vol. 56, pp. 75–86.</li>
+            <li data-year="2020"> <span class="year">2020</span> A. S. Awale & K. H. Inamdar, “Multi-objective optimization of high-speed turning parameters…,” <i>Journal of the Brazilian Society of Mechanical Sciences and Engineering</i>, Vol. 42.</li>
+            <li data-year="2019"> <span class="year">2019</span> A. S. Awale et al., “Influence of minimum quantity lubrication on surface integrity…,” <i>International Journal of Advanced Manufacturing Technology</i>, Vol. 100, pp. 983–997.</li>
+            <li data-year="2019"> <span class="year">2019</span> A. Chaudhari, A. S. Awale, A. K. Chakrabarti, “Surface integrity characterization… under different grinding process,” <i>Materials Research Express</i>, Vol. 6, 116509.</li>
+          </ol>
+
+          <p class="hint" style="margin-top:12px;">
+            .
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Teaching -->
+    <section id="teaching">
+      <div class="wrap">
+        <div class="sectionTitle">
+          <h2>Teaching</h2>
+          <p class="hint">.</p>
+        </div>
+
+        <div class="card pad">
+          <div class="grid2">
+            <div>
+              <ul class="list" style="margin-top:0;">
+                <li>Manufacturing Processes I & II</li>
+                <li>Precision Engineering</li>
+                <li>Engineering Drawing & CAD</li>
+                <li>Sustainable Manufacturing and Impact Assessment</li>
+              </ul>
+            </div>
+            <div>
+              <ul class="list" style="margin-top:0;">
+                <li>Advanced Abrasive Machining & Finishing</li>
+                <li>Abrasive Machining and Finishing (Proposed at IIT Jammu)</li>
+                <li>Precision Engineering (advanced topics)</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills">
+      <div class="wrap">
+        <div class="sectionTitle">
+          <h2>Technical skills</h2>
+          <p class="hint">.</p>
+        </div>
+
+        <div class="grid2">
+          <div class="card pad">
+            <h2 style="font-size:16px; margin-bottom:8px;">Software</h2>
+            <ul class="list" style="margin-top:0;">
+              <li>AutoCAD, CATIA, SOLIDWORKS</li>
+              <li>ANSYS (Explicit Dynamics), CFD (Fluent)</li>
+              <li>Origin, MATLAB, Minitab, CNC part programming</li>
+              <li>ImageJ, X’Pert HighScore</li>
             </ul>
-            <p><small>(Full list of 20+ publications available on Google Scholar)</small></p>
-        </section>
+          </div>
 
-        <section id="projects">
-            [cite_start]<h2>Projects & Skills [cite: 47-49, 108-111]</h2>
-            
-            <h3>Sponsored Research</h3>
-            <p><strong>Improving surface integrity of bioceramic for artificial bone implants using sustainable ultrasonic vibration-assisted grinding.</strong><br>
-            Funded by SERB (₹21.31 Lakhs) | 2022-2024.</p>
-
-            <h3>Technical Skills</h3>
-            <ul>
-                <li><strong>Software:</strong> ANSYS (Explicit dynamics, Fluent), CATIA, SOLIDWORKS, MATLAB, Minitab.</li>
-                <li><strong>Instruments:</strong> SEM, TEM, AFM, XRD, Magnetic Barkhausen noise analyzer.</li>
+          <div class="card pad">
+            <h2 style="font-size:16px; margin-bottom:8px;">Instrumentation & lab</h2>
+            <ul class="list" style="margin-top:0;">
+              <li>SEM, TEM, AFM, XRD</li>
+              <li>Drop shape analyzer, Hot disk thermal constants analyzer</li>
+              <li>Magnetic Barkhausen noise analyzer</li>
             </ul>
+          </div>
+        </div>
+      </div>
+    </section>
 
-            [cite_start]<h3>Teaching [cite: 41-46]</h3>
-            <ul>
-                <li>ME1301: Manufacturing Processes-I</li>
-                <li>PI1401: Manufacturing Processes-II</li>
-                <li>ME1609: Abrasive Machining and Finishing (Proposed)</li>
-            </ul>
-        </section>
+    <!-- Contact -->
+    <section id="contact">
+      <div class="wrap">
+        <div class="sectionTitle">
+          <h2>Contact</h2>
+          <p class="hint">.</p>
+        </div>
 
-        <footer>
-            <p>© 2025 Dr. Akash Subhash Awale. Hosted on GitHub.</p>
-        </footer>
-    </main>
+        <div class="card pad">
+          <div class="grid2">
+            <div>
+              <p style="margin-top:0; color:var(--muted);">
+                For collaboration, project discussions, and student supervision inquiries, please reach out via email.
+              </p>
 
+              <div class="heroCtas" style="margin-top:12px;">
+                <a class="btn primary" href="mailto:akash.awale@iitjammu.ac.in?subject=Research%20Collaboration%20Inquiry">
+                  <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <path d="M4 8l8 5 8-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M6 19h12a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2Z" stroke="currentColor" stroke-width="1.6"/>
+                  </svg>
+                  Email (official)
+                </a>
+
+                <a class="btn" href="mailto:awaleakash14@gmail.com?subject=Hello%20Dr.%20Awale">
+                  <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <path d="M4 8l8 5 8-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M6 19h12a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2Z" stroke="currentColor" stroke-width="1.6"/>
+                  </svg>
+                  Email (personal)
+                </a>
+              </div>
+
+              <p class="hint" style="margin-top:14px;">
+                .
+              </p>
+            </div>
+
+            <div>
+              <div class="contactItem">
+                <div class="left">
+                  <div class="label">Official email</div>
+                  <div class="value">akash.awale@iitjammu.ac.in</div>
+                </div>
+                <div class="right">
+                  <button class="btn" type="button" data-copy-text="akash.awale@iitjammu.ac.in">
+                    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                      <path d="M8 8h10v12H8V8Z" stroke="currentColor" stroke-width="1.6"/>
+                      <path d="M6 16H5a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v1" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+                    </svg>
+                    Copy
+                  </button>
+                </div>
+              </div>
+
+              <div class="contactItem" style="margin-top:10px;">
+                <div class="left">
+                  <div class="label">Mobile</div>
+                  <div class="value">+91-9797454859 · +91-7588802890</div>
+                </div>
+                <div class="right">
+                  <button class="btn" type="button" data-copy-text="+91-9797454859">
+                    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                      <path d="M8 8h10v12H8V8Z" stroke="currentColor" stroke-width="1.6"/>
+                      <path d="M6 16H5a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v1" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+                    </svg>
+                    Copy
+                  </button>
+                </div>
+              </div>
+
+              <div class="mini" style="margin-top:10px;">
+                <div class="k">Address (optional)</div>
+                <div class="v" style="font-weight:600;">IIT Jammu, India</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="wrap footRow">
+        <div>
+          <div class="strong">Dr. Akash Subhash Awale</div>
+          <div style="color:var(--muted); font-size:13px;">
+            IIT Jammu · Mechanical Engineering · <span id="year"></span>
+          </div>
+        </div>
+        <div style="display:flex; gap:10px; flex-wrap:wrap;">
+          <a class="btn" href="#top" style="text-decoration:none;">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M12 5v14M12 5l-5 5M12 5l5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            Top
+          </a>
+          <a class="btn" href="Akash_Awale_CV.pdf" download style="text-decoration:none;">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M12 3v10m0 0 4-4m-4 4-4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M5 16v3a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+            </svg>
+            CV
+          </a>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <button class="backTop" id="backTop" aria-label="Back to top" title="Back to top">
+    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+      <path d="M12 5v14M12 5l-5 5M12 5l5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </button>
+
+  <div class="toast" id="toast" role="status" aria-live="polite">
+    <span class="strong">Copied</span>
+    <span class="small" id="toastMsg">Text copied to clipboard</span>
+  </div>
+
+  <script>
+    // ---------- Helpers ----------
+    const $ = (sel, root=document) => root.querySelector(sel);
+    const $$ = (sel, root=document) => Array.from(root.querySelectorAll(sel));
+
+    // ---------- Mobile menu ----------
+    const menuBtn = $("#menuBtn");
+    const menu = $("#menu");
+
+    function closeMenu(){
+      menu.classList.remove("open");
+      menuBtn?.setAttribute("aria-expanded", "false");
+    }
+    menuBtn?.addEventListener("click", () => {
+      const open = menu.classList.toggle("open");
+      menuBtn.setAttribute("aria-expanded", open ? "true" : "false");
+    });
+    // close menu on link click (mobile)
+    $$("#menu a").forEach(a => a.addEventListener("click", () => closeMenu()));
+    // close menu on escape
+    document.addEventListener("keydown", (e) => {
+      if(e.key === "Escape") closeMenu();
+    });
+
+    // ---------- Theme toggle (persisted) ----------
+    const themeBtn = $("#themeBtn");
+    const root = document.documentElement;
+
+    function setTheme(mode){
+      root.setAttribute("data-theme", mode);
+      localStorage.setItem("theme", mode);
+    }
+    function initTheme(){
+      const saved = localStorage.getItem("theme");
+      if(saved){
+        setTheme(saved);
+        return;
+      }
+      // system preference
+      const prefersLight = window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches;
+      setTheme(prefersLight ? "light" : "dark");
+    }
+    initTheme();
+
+    themeBtn?.addEventListener("click", () => {
+      const current = root.getAttribute("data-theme") || "dark";
+      setTheme(current === "dark" ? "light" : "dark");
+    });
+
+    // ---------- Scrollspy (highlight nav) ----------
+    const sections = $$("main section[id]");
+    const navLinks = $$("#menu a.link");
+
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting){
+          const id = entry.target.getAttribute("id");
+          navLinks.forEach(a => {
+            const active = a.getAttribute("href") === "#" + id;
+            a.setAttribute("aria-current", active ? "page" : "false");
+            if(!active) a.removeAttribute("aria-current");
+          });
+        }
+      });
+    }, { rootMargin: "-45% 0px -50% 0px", threshold: 0.02 });
+
+    sections.forEach(s => obs.observe(s));
+
+    // ---------- Back to top ----------
+    const backTop = $("#backTop");
+    function onScroll(){
+      const show = window.scrollY > 600;
+      backTop?.classList.toggle("show", show);
+    }
+    window.addEventListener("scroll", onScroll, { passive:true });
+    onScroll();
+
+    backTop?.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
+
+    // ---------- Toast & Copy buttons ----------
+    const toast = $("#toast");
+    const toastMsg = $("#toastMsg");
+    let toastTimer;
+
+    function showToast(msg){
+      if(!toast) return;
+      toastMsg.textContent = msg;
+      toast.classList.add("show");
+      clearTimeout(toastTimer);
+      toastTimer = setTimeout(() => toast.classList.remove("show"), 1800);
+    }
+
+    async function copyText(text){
+      try{
+        await navigator.clipboard.writeText(text);
+        showToast("Copied: " + text);
+      }catch{
+        // fallback
+        const ta = document.createElement("textarea");
+        ta.value = text;
+        ta.style.position = "fixed";
+        ta.style.left = "-9999px";
+        document.body.appendChild(ta);
+        ta.select();
+        document.execCommand("copy");
+        ta.remove();
+        showToast("Copied: " + text);
+      }
+    }
+
+    $$("[data-copy]").forEach(btn => {
+      btn.addEventListener("click", () => {
+        const sel = btn.getAttribute("data-copy");
+        const el = sel ? $(sel) : null;
+        const text = el?.textContent?.trim() || "";
+        if(text) copyText(text);
+      });
+    });
+    $$("[data-copy-text]").forEach(btn => {
+      btn.addEventListener("click", () => {
+        const text = (btn.getAttribute("data-copy-text") || "").trim();
+        if(text) copyText(text);
+      });
+    });
+
+    // ---------- Publications: search & year filter ----------
+    const pubSearch = $("#pubSearch");
+    const pubItems = $$("#pubList li");
+    const yearChips = $$(".chip[data-year]");
+    const clearBtn = $("#clearPubFilters");
+
+    let activeYear = "all";
+
+    function applyPubFilters(){
+      const q = (pubSearch?.value || "").trim().toLowerCase();
+      pubItems.forEach(li => {
+        const y = li.getAttribute("data-year");
+        const text = li.textContent.toLowerCase();
+        const matchYear = (activeYear === "all") || (y === activeYear);
+        const matchQ = !q || text.includes(q);
+        li.style.display = (matchYear && matchQ) ? "" : "none";
+      });
+    }
+
+    yearChips.forEach(chip => {
+      chip.addEventListener("click", () => {
+        activeYear = chip.getAttribute("data-year") || "all";
+        yearChips.forEach(c => c.setAttribute("aria-pressed", (c === chip) ? "true" : "false"));
+        applyPubFilters();
+      });
+    });
+
+    pubSearch?.addEventListener("input", () => applyPubFilters());
+
+    clearBtn?.addEventListener("click", () => {
+      activeYear = "all";
+      yearChips.forEach(c => c.setAttribute("aria-pressed", c.getAttribute("data-year")==="all" ? "true" : "false"));
+      if(pubSearch) pubSearch.value = "";
+      applyPubFilters();
+      showToast("Filters cleared");
+    });
+
+    applyPubFilters();
+
+    // ---------- Print ----------
+    $("#printBtn")?.addEventListener("click", () => window.print());
+
+    // ---------- Footer year ----------
+    $("#year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
